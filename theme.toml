@@ -1,10 +1,10 @@
 description = "A simple theme for Hugo. That's it."
 features = ["blog", "shortcode", "syntax Highlighting"]
-homepage = "https://github.com/panr/hugo-theme-hello-friend/"
+homepage = "https://github.com/nerdondon/hugo-theme-hello-friend/"
 license = "MIT"
-licenselink = "https://github.com/panr/hugo-theme-hello-friend/blob/master/LICENSE.md"
+licenselink = "https://github.com/nerdondon/hugo-theme-hello-friend/blob/master/LICENSE.md"
 min_version = 0.74
-name = "hello-friend"
+name = "hello-friend-nerdondon"
 tags = [
   "blog",
   "clean",
@@ -22,6 +22,5 @@ tags = [
 ]
 
 [author]
-homepage = "https://radoslawkoziel.pl"
 name = "panr"
 twitter = "https://twitter.com/panr"
