@@ -4,6 +4,7 @@
   "main": "index.js",
   "author": "Radosław Kozieł <@panr> <radoslaw.koziel@gmail.com>",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "dev": "webpack --mode=development --watch",
     "build": "webpack --mode=production"
