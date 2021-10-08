@@ -11,13 +11,18 @@
       text-align: center;
       margin: 0 auto;
       padding: 5px 10px;
-      background: $background;
-      color: $color-secondary;
-      font-size: .8rem;
+      background: $light-background;
+      color: $light-color-secondary;
+      font-size: 0.8rem;
       text-transform: uppercase;
       text-decoration: none;
-      letter-spacing: .1em;
+      letter-spacing: 0.1em;
       z-index: 1;
+
+      .dark-theme & {
+        background: $dark-background;
+        color: $dark-color-secondary;
+      }
     }
 
     hr {
@@ -47,7 +52,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: $background-secondary;
+  background: $light-background-secondary;
   font-size: 1rem;
   font-weight: 500;
   border-radius: 8px;
@@ -55,6 +60,10 @@
   padding: 0;
   cursor: pointer;
   appearance: none;
+
+  .dark-theme & {
+    background: $dark-background-secondary;
+  }
 
   + .button {
     margin-left: 10px;

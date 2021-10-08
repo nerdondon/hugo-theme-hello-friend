@@ -11,7 +11,11 @@
   }
 
   &:not(:last-of-type) {
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid $light-border-color;
+
+    .dark-theme & {
+      border-bottom: $dark-border-color;
+    }
   }
 
   &-meta {
@@ -19,7 +23,7 @@
     margin-bottom: 10px;
 
     @media #{$media-size-phone} {
-      font-size: .85rem;
+      font-size: 0.85rem;
     }
   }
 
@@ -40,7 +44,7 @@
     display: block;
     margin-bottom: 20px;
     font-size: 1rem;
-    opacity: .5;
+    opacity: 0.5;
 
     a {
       text-decoration: none;
@@ -59,7 +63,7 @@
     img {
       margin: 0 auto;
       border-radius: 8px;
-      box-shadow: 0 12px 40px rgba(0, 0, 0, .15);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
     }
 
     @media #{$media-size-tablet} {
@@ -78,7 +82,7 @@
     justify-content: center;
     margin-bottom: 10px;
 
-    &+ h2 {
+    & + h2 {
       margin-top: -10px;
       margin-bottom: 20px;
     }

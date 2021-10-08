@@ -38,7 +38,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    background: $background-secondary;
+    background: $light-background-secondary;
     padding: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -46,6 +46,10 @@
     min-height: 30px;
     margin: 0;
     cursor: pointer;
+
+    .dark-theme & {
+      background: $dark-background-secondary;
+    }
   }
 
   &__title {
@@ -58,10 +62,14 @@
   }
 
   &__language {
-    background: $background;
+    background: $light-background;
     color: $color;
     border-radius: 10px;
     padding: 3px 10px;
+
+    .dark-theme & {
+      background: $dark-background-secondary;
+    }
   }
 
   &__toggle {
