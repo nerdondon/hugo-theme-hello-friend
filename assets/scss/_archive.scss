@@ -16,7 +16,11 @@
         }
   
         &:not(:last-of-type) {
-          border-bottom: 1px solid $border-color;
+          border-bottom: 1px solid $light-border-color;
+
+          .dark-theme & {
+            border-bottom: 1px solid $dark-border-color;
+          }
         }
       }
   
@@ -28,7 +32,11 @@
         }
   
         &:not(:last-of-type) {
-          border-bottom: 1px solid $border-color;
+          border-bottom: 1px solid $light-border-color;
+
+          .dark-theme & {
+            border-bottom: 1px solid $dark-border-color;
+          }
         }
   
         &-header {
@@ -57,7 +65,11 @@
       padding: 20px 0;
   
       &:not(:last-of-type) {
-        border-bottom: 1px solid $border-color;
+        border-bottom: 1px solid $light-border-color;
+
+        .dark-theme & {
+          border-bottom: 1px solid $dark-border-color;
+        }
       }
   
       &-title {
