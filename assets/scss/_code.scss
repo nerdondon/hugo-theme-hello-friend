@@ -38,7 +38,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    background: var(--background-secondary);
+    background: $background-secondary;
     padding: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -50,7 +50,7 @@
 
   &__title {
     flex: 1;
-    color: var(--color);
+    color: $color;
     padding: 3px 10px;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -58,14 +58,14 @@
   }
 
   &__language {
-    background: var(--background);
-    color: var(--color);
+    background: $background;
+    color: $color;
     border-radius: 10px;
     padding: 3px 10px;
   }
 
   &__toggle {
-    color: var(--color);
+    color: $color;
     font-size: 16px;
     padding: 3px 10px;
 

@@ -1,0 +1,68 @@
+:root {
+  /* variables for js, must be the same as these in @custom-media queries */
+  --phoneWidth: (max-width: 684px);
+  --tabletWidth: (max-width: 900px);  
+}
+
+/* light theme color */
+$light-background: #fff;
+$light-background-secondary: #eaeaea;
+$light-header: #fafafa;
+$light-color: #222;
+$light-color-secondary: #999;
+$light-border-color: #dcdcdc;
+
+$theme-map-light: (
+  background: $light-background,
+  background-secondary: $light-background-secondary,
+  header: $light-header,
+  color: $light-color,
+  color-secondary: $light-color-secondary,
+  border-color: $light-border-color,
+);
+
+/* dark theme colors */
+$dark-background: #292a2d;
+$dark-background-secondary: #3b3d42;
+$dark-header: #252627;
+$dark-color: #a9a9b3;
+$dark-color-secondary: #73747b;
+$dark-border-color: #4a4b50;
+
+$theme-map-dark: (
+  background: $dark-background,
+  background-secondary: $dark-background-secondary,
+  header: $dark-header,
+  color: $dark-color,
+  color-secondary: $dark-color-secondary,
+  border-color: $dark-border-color,
+);
+
+body {
+  @include spread-map($theme-map-light);
+}
+
+body.dark-theme {
+  @include spread-map($theme-map-dark);
+}
+
+$media-size-phone: "(max-width: 684px)";
+$media-size-tablet: "(max-width: 900px)";
+
+@mixin spread-map($map: ()) {
+  @each $key, $value in $map {
+      #{$key}: $value;
+  }
+}
+
+@mixin greater-icon($stroke-width: 3px, $width: .95rem, $height: 100%) {
+  .greater-icon {
+    width: $width;
+    height: $height;
+
+    path {
+      stroke: currentColor;
+      stroke-width: $stroke-width;
+    }
+  }
+}
