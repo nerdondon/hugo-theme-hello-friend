@@ -11,6 +11,16 @@
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="{{ .Permalink }}" />
 
+{{ block "title" . }}
+<title>
+  {{ if .IsHome }}
+  { $.Site.Title }}{{ with $.Site.Params.Subtitle }} — {{ . }}{{ end }}
+  {{ else }}
+  {{ .Title }} :: {{ $.Site.Title }}{{ with $.Site.Params.Subtitle }} — {{ . }}{{ end }}
+  {{ end }}
+</title>
+{{ end }}
+
 <!-- head custom -->
 {{- partial "prepended_head.html" . }}
 
@@ -45,6 +55,10 @@
 {{ range .AlternativeOutputFormats -}}
   {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 {{ end -}}
+
+{{ if $.Site.GoogleAnalytics }}
+  {{ template "_internal/google_analytics.html" . }}
+{{ end }}
 
 <!-- head custom -->
 {{- partial "extended_head.html" . }}
