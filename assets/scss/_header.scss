@@ -1,10 +1,14 @@
 .header {
-    background: $header;
+    background: $light-header;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     padding: 20px;
+
+    .dark-theme & {
+      background: $dark-header;
+    }
   
     &__right {
       display: flex;

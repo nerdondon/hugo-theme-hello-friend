@@ -54,16 +54,20 @@
 
   &__title {
     flex: 1;
-    color: $color;
+    color: $light-color;
     padding: 3px 10px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+
+    .dark-theme & {
+      color: $dark-color;
+    }
   }
 
   &__language {
     background: $light-background;
-    color: $color;
+    color: $light-color;
     border-radius: 10px;
     padding: 3px 10px;
 
@@ -73,9 +77,13 @@
   }
 
   &__toggle {
-    color: $color;
+    color: $light-color;
     font-size: 16px;
     padding: 3px 10px;
+
+    .dark-theme & {
+      color: $dark-color;
+    }
 
     &:after {
       content: attr(data-label-collapse);

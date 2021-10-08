@@ -18,7 +18,7 @@ body {
   font-feature-settings: "liga", "tnum", "case", "calt", "zero", "ss01", "locl";
   line-height: 1.54;
   background-color: $light-background;
-  color: $color;
+  color: $light-color;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
@@ -26,6 +26,7 @@ body {
 
   .dark-theme & {
     background-color: $dark-background;
+    color: $dark-color;
   }
 
   @media #{$media-size-phone} {
@@ -260,7 +261,7 @@ ol ol {
   justify-content: center;
   margin: 50px 0;
 
-  @media (--phone) {
+  @media #{$media-size-phone} {
     margin-top: 0;
   }
 }
@@ -292,7 +293,7 @@ hr {
 }
 
 blockquote.twitter-tweet {
-  background: hsl(206deg 62% 45% / 10%);
+  background: hsla(206deg, 62%, 45%, 10%);
   border: none;
   padding: 30px;
   color: inherit;
