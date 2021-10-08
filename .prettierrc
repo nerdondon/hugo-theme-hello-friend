@@ -1,11 +1,14 @@
 {
-  "parser": "babel",
   "printWidth": 100,
+  "proseWrap": "always",
   "trailingComma": "all",
-  "overrides": [{
-    "files": ["*.html"],
-    "options": {
-      "parser": "go-template"
+  "prese": "always",
+  "overrides": [
+    {
+      "files": ["*.html"],
+      "options": {
+        "parser": "go-template"
+      }
     }
-  }]
+  ]
 }
