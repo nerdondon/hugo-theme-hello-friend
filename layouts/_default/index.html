@@ -11,6 +11,11 @@
   {{ if .Content }}
     <div class="index-content {{ if .Params.framed -}}framed{{- end -}}">
       {{ .Content }}
+      {{- with $.Site.Params.social }}
+        <div class="socials">
+          {{ partial "social-icons.html" . }}
+        </div>
+      {{- end }}
     </div>
   {{ end }}
 
