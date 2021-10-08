@@ -138,7 +138,7 @@ figure {
 
 code,
 kbd {
-  font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+  font-family: "JetBrains Mono", "Consolas", monospace;
   background: $light-background-secondary;
   padding: 1px 6px;
   margin: 0 2px;
@@ -289,6 +289,17 @@ hr {
 
   .dark-theme & {
     border: 1px solid $dark-border-color;
+  }
+}
+
+.motd {
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  font-size: 0.8 rem;
+  text-align: left;
+
+  & h1 {
+    text-align: center;
+    margin: 0;
   }
 }
 
