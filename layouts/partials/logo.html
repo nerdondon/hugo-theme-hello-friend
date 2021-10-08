@@ -5,11 +5,17 @@
 >
   {{ if $.Site.Params.Logo.path }}
     <img src="{{ $.Site.Params.Logo.path }}" alt="{{ $.Site.Params.Logo.alt }}" />
-    {{ else }}
+  {{ else }}
     <span class="logo__mark">{{ partial "greater-icon.html" . }}</span>
-    <span class="logo__text"
-      >{{ with $.Site.Params.Logo.logoText }}{{ . }}{{ else }}nerdondon@{{ end }}</span
-    >
+    <span class="logo__text">
+      {{ if and .IsHome (isset $.Site.Params.Logo logoText) }}
+        {{ $.Site.Params.Logo.logoText }}
+      {{ else if isset .Params logotext}}
+        {{.Params.logotext}}
+      {{ else }}
+        cat .
+      {{ end }}
+    </span>
     <span class="logo__cursor"></span>
   {{ end }}
 </a>
