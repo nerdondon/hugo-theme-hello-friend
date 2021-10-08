@@ -9,15 +9,14 @@
           >© {{ now.Year }} Powered by
           <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span
         >
-        <span
-          >Theme created by panr with my own additions.</span
-        >
+        {{- with .Site.Params.social }}
+          <div>
+            {{ partial "social-icons.html" . }}
+          </div>
+        {{- end }}
       </div>
     {{ end }}
   </div>
 </footer>
-
-<script src="{{ "assets/main.js" | absURL }}"></script>
-<script src="{{ "assets/prism.js" | absURL }}"></script>
 
 {{- partial "extended_footer.html" . }}
