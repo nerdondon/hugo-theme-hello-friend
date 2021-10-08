@@ -8,8 +8,8 @@
   {{ else }}
     <span class="logo__mark">{{ partial "greater-icon.html" . }}</span>
     <span class="logo__text">
-      {{ if and .IsHome (isset $.Site.Params.Logo "logoText") }}
-        {{ $.Site.Params.Logo.logoText }}
+      {{ if and .IsHome (isset $.Site.Params.Logo "logotext") }}
+        {{ $.Site.Params.Logo.logotext }}
       {{ else if isset .Params "logotext"}}
         {{.Params.logotext}}
       {{ else }}
