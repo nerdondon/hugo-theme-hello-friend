@@ -70,13 +70,7 @@
       {{ end }}
 
       <div class="post-content">
-        {{ with .Description }}
-          {{ . | markdownify }}
-        {{ else }}
-          {{ if .Truncated }}
-            {{ .Summary }}
-          {{ end }}
-        {{ end }}
+        {{.Content}}
       </div>
       {{ if not .Params.hideReadMore }}
         <div><a class="read-more button" href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore | default "Read more" }} →</a></div>
